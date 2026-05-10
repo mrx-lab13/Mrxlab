@@ -56,8 +56,8 @@ nav {
   display: grid; grid-template-columns: 1fr 1fr;
   align-items: center; min-height: 520px;
 }
-.hero-text { padding: 72px 48px 72px 56px; display: flex; flex-direction: column; justify-content: center; }
-.hero-title { font-size: 38px; font-weight: 700; color: var(--navy); line-height: 1.5; margin-bottom: 16px; }
+.hero-text { padding: 64px 32px 64px 48px; display: flex; flex-direction: column; justify-content: center; }
+.hero-title { font-size: 34px; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: 16px; }
 .hero-subtitle { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
 .hero-desc { font-size: 13px; color: var(--text-light); margin-bottom: 32px; line-height: 1.9; }
 .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -153,6 +153,25 @@ nav {
 .price-amount span { font-size: 12px; font-family: var(--font-sans); font-weight: 400; color: var(--text-light); }
 .price-features-inline { font-size: 11px; color: var(--text-light); line-height: 1.6; }
 .price-note { text-align: center; font-size: 12px; color: var(--text-light); margin-top: 16px; }
+.price-category-label {
+  font-size: 13px; font-weight: 700; color: var(--navy);
+  letter-spacing: 0.05em; margin-bottom: 14px;
+  padding-left: 12px; border-left: 3px solid var(--gold);
+}
+.price-note-inline { font-size: 11px; color: var(--text-light); margin-top: 4px; font-style: italic; }
+.price-row-featured { border-color: var(--gold); background: #fdfaf5; }
+.price-badge {
+  display: inline-block; background: var(--gold); color: #fff;
+  font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px;
+  vertical-align: middle; margin-left: 6px;
+}
+.price-amount-sm { font-size: 20px; }
+.price-remarks {
+  margin-top: 24px; padding: 16px 20px;
+  background: #f8f7f4; border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.price-remarks p { font-size: 11px; color: var(--text-light); line-height: 2; }
 
 /* CTA */
 .cta { background: var(--bg-light); border-top: 1px solid var(--border); padding: 56px 40px; }
@@ -201,7 +220,7 @@ hr { border: none; border-top: 1px solid var(--border); }
   .nav-sns-btn span.nav-label { display: none; }
   .nav-sns-btn { padding: 9px 12px; }
   .hero-text { padding: 48px 32px 48px 40px; }
-  .hero-title { font-size: 30px; }
+  .hero-title { font-size: 26px; }
   .hero-img-wrap { min-height: 400px; }
   .service-grid { grid-template-columns: repeat(2,1fr); gap: 20px; }
   .works-grid { gap: 16px; }
@@ -257,16 +276,13 @@ hr { border: none; border-top: 1px solid var(--border); }
     <span class="logo-main">Mr.X Lab.</span>
     <span class="logo-sub">Web Design &amp; LP Creation</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#service">サービス</a></li>
-    <li><a href="#price">料金</a></li>
-  </ul>
+
   <div class="nav-sns">
-    <a href="#" class="nav-sns-btn line-btn">
+    <a href="https://lin.ee/YJ1zy6O" target="_blank" class="nav-sns-btn line-btn">
       <span class="nav-sns-icon"><img src="data:image/jpeg;base64,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" alt="LINE"></span>
       <span class="nav-label">LINE</span>
     </a>
-    <a href="#" class="nav-sns-btn ig-btn">
+    <a href="https://www.instagram.com/lp.planner123?igsh=MWlnZWYwbTgwZTYxeg%3D%3D&utm_source=qr" target="_blank" class="nav-sns-btn ig-btn">
       <span class="nav-sns-icon"><img src="data:image/jpeg;base64,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" alt="Instagram" style="width:20px;height:20px;object-fit:cover;border-radius:50%;display:block;"></span>
       <span class="nav-label">Instagram</span>
     </a>
@@ -278,14 +294,12 @@ hr { border: none; border-top: 1px solid var(--border); }
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#service">サービス</a>
-  <a href="#price">料金</a>
   <div class="mobile-menu-sns">
-    <a href="#" class="line-btn">
+    <a href="https://lin.ee/YJ1zy6O" target="_blank" class="line-btn">
       <img src="data:image/jpeg;base64,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" alt="LINE" style="width:22px;height:22px;border-radius:4px;">
       LINE
     </a>
-    <a href="#" class="ig-btn">
+    <a href="https://www.instagram.com/lp.planner123?igsh=MWlnZWYwbTgwZTYxeg%3D%3D&utm_source=qr" target="_blank" class="ig-btn">
       <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAA7ADwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KQ8V8lftK/tManBdXfgP4dagbZIi0N9qcDYkdhw0cLD7qg5Bcck5AwBk1CPNJI9XKMnxOdYj6vhl6vol3Z7r4/+PPwq+Grva+KPFttHfIMmytgbi4B9CiZK/8AAsV5bcft5fCOKUpDofiiZB/GLWFQfwMua+HLqJppXmuJctIxZmduWY9SSep96gNtD/z0j/76Fe9hsHl9v3km362P03D+HmEpw/eylJ/cvuX+bP0P8K/ti/AzxPcLay+IbnRZZCAo1W1aFCT/ANNFLIPxYV7RaXlpf20d5Y3MVxbzKHjlicOjqehVhwR7ivyG+yxk4R1JPYMM16b8FPj14z+C2rRJaTy6h4ekkzeaTJJ+7IPV4if9XJ7jg9GB6jor5HQrQcsHPXs+vo/8/vPGzbgN0YOeCk7ro+vo9LfP7z9MqKxvCHi3Q/HPhuw8VeHLwXOn6jEJYXxgjsVYfwspBBHYgitmvmJRcG4yVmj84nCVOThJWaPPvjr4wn8G/DnUb2xmMV5dj7Hbup5QuDuYe4QMR74r887y0muJXlaMszHIH8h/Svt39qeGS58N6ZAudnmyuw98KP5E18srohMikIfvA/rXyuaZx9UxLpdrf5n7R4f0qWGyx1vtTk7/AC0S/rueh+I9Y8O/sx2OleFPDXg3SNa8Z3djFfavquqQmVYC+cRRLwRyDgAgYAJyTw/Rfjh+0P4j046xoHwh0nULHki4tvD0rxtjrtO/5vwzW38YPCum+KP2ldH0zWY99jeNpsFwpOA6YJKZ/wBrG38a5f4wfFj4pWXxG1XSdD8R33h/TtDujZWVjY4hiSKPAVmUDDbhhucjBAAxXe8xjCUud6Rly/MeDwtLM4UUqUalepD2k5VHK1m7WSXm7JKyil1ubeh/FPXPF3hTWPEnxU+H3gS78LaRexabqlmbc22pRGQqC8SMScpvBwdrHDbTkV4p8c/hnZ/DX4gX3h3S52n0yWKO+0+RzuY28oJVWPcqQy57gA969I/aEhi8TeCPAXxL1WwgtfEfiDTZ49S8uMJ9oEQXy5iPcNwfRwOgFVP2sIw3j7SSR/zLVh/OWvoMtzB0qi5Xpp+Ox0ZTSjTxNKVFckavtU4L4U6bjHTXXXm95JXTV1odB+w18Qrmw1/VfhhfTsbW+ibUrBWP3JkwJVH+8hDfWM+tfaFfnB+zdNNZ/Hrwk9uWBkupImx3VoJAf0r9Hh0Fd2bcsq6qx+0k367H57xxgoYTNOaH24pv11X6HA/Gbw6de8LBkTLWsu4+ysNpP57a+bj4eaPOYvnXsRjkdq+zLiCK6gktp0DxyqUZT0IPWvG/FfgSXTbt3jjLxuSQwH3h6/X1H41+TcaYKrSqRx1P4Xo/J9H89v8AhzXhjOvqtN4Sb63RyPxl8O32tavYfEHSI5ZbK+s7d0uYFJME0eeGI+6QcYPqCOorD1L4maTqflX/AI8+FOkeIdXtkCLfsTCZQvTzFCEN9OnoB0rr7LVPE/hVHGh6lJbxudzRFQ8ZPrtYYB9xisnWPjF8T7LPlavajHrYxmvPw+c4erUlWVSUJT1lHljKN+6vJfLS67n0OEhWqU4UOSM1DSL55Qkl2vGLe2j1s+x5H4lm+IHx48Z21uulvJKwWztLa2gZbaxgJ55xhVHUseuPoKT9qLVtO1P4my2em3K3Eei6fbaVJKvRpY9xcD6F9p9wa3/FPx1+LupWkunN4oNrDKCrm0to4ZCPQOBuH4EGvI7Tw9qevahDpemWk11dXUgjjjjUs7uT0Hqf/wBZr6/LcdTm1yycm3q2rfhdn2eX4SrCpDEYiMKdOlFqMYttLmtdttR7bW6ttnoP7IPhGfXfjBFrvkk2ugWkt07EcCR1MUY+vzMf+AmvvKvN/gV8J7f4T+Dl02Xy31W/YXOoypyPMxhY1PdUHA9SWPevSK+rrVXVafZWPxjirNYZvmU61L4I+6vNLr8238gqG5tYLyIwXEYdD2PY+o9DU1FYThGpFwmrp9GfOptO6OL1vwALlXaxkQk9A/yn8xwfyFeca98IPFV4XFtp4cdj50Qz+bCve6K+Yq8H5ZOp7SCcfJPT8Uz2MJnuMwfwNP1/pHzNafsy+JNVuN2qXdnYxZ+bc/mvj2VOPzavYvh78IvCPw7TztLtTcag67XvZwDJg9VUDhF9h17k129Fexgsqw2AX7pa93qaZhxJmOZw9lWqWh2Wi+fV/NhRRRXonhH/2Q==" alt="Instagram" style="width:22px;height:22px;border-radius:50%;object-fit:cover;">
       Instagram
     </a>
@@ -296,14 +310,14 @@ hr { border: none; border-top: 1px solid var(--border); }
 <section class="hero-section">
   <div class="hero-grid">
     <div class="hero-text">
-      <h1 class="hero-title">地域で選ばれるお店へ。<br>想いが伝わるホームページを。</h1>
+      <h1 class="hero-title">地域で選ばれるお店へ。<br>想いが伝わる<span style="color:var(--gold);">ホームページ</span>を。</h1>
       <p class="hero-subtitle">ホームページ・LP制作を、スマホ最適で。</p>
       <p class="hero-desc">個人事業主様・地域店舗様の魅力を引き出し、<br>集客につながるサイトを制作します。</p>
       <div class="hero-btns">
-        <a href="#" class="btn-primary">
+        <a href="https://lin.ee/YJ1zy6O" target="_blank" class="btn-primary">
           <span class="btn-icon"><img src="data:image/jpeg;base64,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" alt="LINE"></span>LINEで相談する &nbsp;&rarr;
         </a>
-        <a href="#" class="btn-ig">
+        <a href="https://www.instagram.com/lp.planner123?igsh=MWlnZWYwbTgwZTYxeg%3D%3D&utm_source=qr" target="_blank" class="btn-ig">
         <img src="data:image/jpeg;base64,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" alt="Instagram" class="btn-icon" style="border-radius:50%;">
           Instagramを見る &nbsp;&rarr;
         </a>
@@ -401,6 +415,9 @@ hr { border: none; border-top: 1px solid var(--border); }
   <div class="max-w">
     <p class="section-label">PRICE</p>
     <h2 class="section-title">料金プラン</h2>
+
+    <!-- LP制作 -->
+    <p class="price-category-label">LP制作プラン</p>
     <div class="price-list">
       <div class="price-row">
         <div class="price-icon-wrap">
@@ -409,9 +426,10 @@ hr { border: none; border-top: 1px solid var(--border); }
           </svg>
         </div>
         <div class="price-info">
-          <div class="price-name">シンプルLPプラン</div>
+          <div class="price-name">LPシンプルプラン</div>
           <div class="price-amount">&#165;49,800<span>（税込）</span></div>
-          <div class="price-features-inline">トップページ（1P完結）／スマホ最適化／お問い合わせ導線／基本SEO対策</div>
+          <div class="price-features-inline">シンプルLP制作／スマホ対応／サイトデータ納品／修正2回まで</div>
+          <div class="price-note-inline">※公開設定・独自ドメイン接続は含まれません</div>
         </div>
       </div>
       <div class="price-row">
@@ -421,11 +439,29 @@ hr { border: none; border-top: 1px solid var(--border); }
           </svg>
         </div>
         <div class="price-info">
-          <div class="price-name">デザインLPプラン</div>
+          <div class="price-name">LPデザインプラン</div>
           <div class="price-amount">&#165;59,800<span>（税込）</span></div>
-          <div class="price-features-inline">トップページ（1P完結）／スマホ最適化／お問い合わせ導線／基本SEO対策</div>
+          <div class="price-features-inline">オリジナルデザインLP制作／スマホ対応／サイトデータ納品／修正2回まで</div>
+          <div class="price-note-inline">※公開設定・独自ドメイン接続は含まれません</div>
         </div>
       </div>
+      <div class="price-row price-row-featured">
+        <div class="price-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="price-info">
+          <div class="price-name">LPスタンダードプラン <span class="price-badge">おすすめ</span></div>
+          <div class="price-amount">&#165;79,800<span>（税込）</span></div>
+          <div class="price-features-inline">LPデザインプラン内容込み／GitHub Pages公開設定／独自ドメイン接続／修正2回まで</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ホームページ制作 -->
+    <p class="price-category-label" style="margin-top:40px;">ホームページ制作プラン</p>
+    <div class="price-list">
       <div class="price-row">
         <div class="price-icon-wrap">
           <svg viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -433,13 +469,61 @@ hr { border: none; border-top: 1px solid var(--border); }
           </svg>
         </div>
         <div class="price-info">
-          <div class="price-name">ホームページ制作プラン</div>
-          <div class="price-amount">&#165;99,800〜<span>（税込）</span></div>
-          <div class="price-features-inline">トップページ+下層ページ（5Pまで）／スマホ最適化／お問い合わせフォーム／基本SEO対策</div>
+          <div class="price-name">ホームページ基本プラン</div>
+          <div class="price-amount">&#165;99,800<span>（税込）</span></div>
+          <div class="price-features-inline">TOPページ＋下層3ページまで／スマホ対応／サイトデータ納品／修正2回まで</div>
+          <div class="price-note-inline">追加ページ：1ページ ¥33,000（税込）</div>
         </div>
       </div>
     </div>
-    <p class="price-note">※保守・運用サポートプラン：月額 &#165;15,000〜（内容により変動します）</p>
+
+    <!-- サポート -->
+    <p class="price-category-label" style="margin-top:40px;">更新サポート・スポット修正</p>
+    <div class="price-list">
+      <div class="price-row">
+        <div class="price-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z" rx="2"/><path d="M8 2v4M16 2v4M4 10h16"/>
+          </svg>
+        </div>
+        <div class="price-info">
+          <div class="price-name">LP更新サポート</div>
+          <div class="price-amount price-amount-sm">月額 &#165;11,000〜<span>（税込）</span></div>
+          <div class="price-features-inline">サーバー・ドメイン維持管理／軽微な管理対応</div>
+        </div>
+      </div>
+      <div class="price-row">
+        <div class="price-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <div class="price-info">
+          <div class="price-name">ホームページ更新サポート</div>
+          <div class="price-amount price-amount-sm">月額 &#165;16,500〜<span>（税込）</span></div>
+          <div class="price-features-inline">月4回まで更新対応／テキスト修正・画像変更・PDF差し替え・軽微修正対応</div>
+        </div>
+      </div>
+      <div class="price-row">
+        <div class="price-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+        </div>
+        <div class="price-info">
+          <div class="price-name">スポット修正（単発）</div>
+          <div class="price-amount price-amount-sm">1回 &#165;3,300<span>（税込）</span></div>
+          <div class="price-features-inline">プロフィール画像変更／テキスト修正／画像差し替え／営業時間変更</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-remarks">
+      <p>※ 大幅なデザイン変更・構成変更は別途お見積りとなります。</p>
+      <p>※ 修正回数超過時は追加料金が発生する場合があります。</p>
+      <p>※ サーバー・ドメイン費用はお客様負担となります。</p>
+      <p>※ 公開後の不具合対応は更新サポート契約範囲内となります。</p>
+    </div>
   </div>
 </section>
 
@@ -450,11 +534,11 @@ hr { border: none; border-top: 1px solid var(--border); }
     <h3 class="cta-title">LINEでのご相談・お見積りは無料です。</h3>
     <p class="cta-desc">あなたのお店やサービスの魅力を、ホームページで最大限に伝えます。</p>
     <div class="cta-btns">
-      <a href="#" class="btn-primary">
+      <a href="https://lin.ee/YJ1zy6O" target="_blank" class="btn-primary">
         <span class="btn-icon"><img src="data:image/jpeg;base64,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" alt="LINE"></span>
         LINEで相談する &nbsp;&rarr;
       </a>
-      <a href="#" class="btn-ig">
+      <a href="https://www.instagram.com/lp.planner123?igsh=MWlnZWYwbTgwZTYxeg%3D%3D&utm_source=qr" target="_blank" class="btn-ig">
         <img src="data:image/jpeg;base64,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" alt="Instagram" class="btn-icon" style="border-radius:50%;">
         Instagramを見る &nbsp;&rarr;
       </a>
