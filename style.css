@@ -19,7 +19,7 @@ html{scroll-behavior:smooth;background:#0b0b09}
 body{
   margin:0;color:var(--ink);font-family:var(--jp);line-height:1.55;
   background-color:var(--paper);
-  background-image:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04)),url("assets/washi_texture_01.webp");
+  background-image:linear-gradient(rgba(255,255,255,.04),rgba(255,255,255,.04)),url("washi_texture_01.webp");
   background-size:auto,720px 720px;
   overflow-x:hidden;
 }
@@ -29,7 +29,7 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3,p,figure{margin:0}
 button{font:inherit}
 .wrap{width:min(100%,var(--wrap));margin:auto;padding:0 34px}
-.seal{display:inline-block;width:25px;height:25px;background:var(--red);-webkit-mask:url("assets/seal_stamp_editable.svg") center/contain no-repeat;mask:url("assets/seal_stamp_editable.svg") center/contain no-repeat}
+.seal{display:inline-block;width:25px;height:25px;background:var(--red);-webkit-mask:url("seal_stamp_editable.svg") center/contain no-repeat;mask:url("seal_stamp_editable.svg") center/contain no-repeat}
 .reveal{opacity:1;transform:none}
 .brush-divider{display:none}
 
@@ -40,7 +40,7 @@ button{font:inherit}
   position:relative;z-index:20;background:transparent;border:0;
 }
 .logo,.footer-logo{display:flex;align-items:center;gap:10px}
-.logo-x{width:52px;height:52px;flex:none;background:var(--ink);-webkit-mask:url("assets/brush_x_editable.svg") center/contain no-repeat;mask:url("assets/brush_x_editable.svg") center/contain no-repeat}
+.logo-x{width:52px;height:52px;flex:none;background:var(--ink);-webkit-mask:url("brush_x_editable.svg") center/contain no-repeat;mask:url("brush_x_editable.svg") center/contain no-repeat}
 .logo-text{display:flex;flex-direction:column;line-height:1}
 .logo-main{font-family:var(--label);font-size:1.38rem;font-weight:600;letter-spacing:.01em}
 .logo-sub{margin-top:5px;font-family:var(--label);font-size:.56rem;font-weight:600;letter-spacing:.17em}
@@ -53,8 +53,8 @@ button{font:inherit}
 
 /* hero */
 .hero{height:390px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;left:32%;right:0;top:60px;bottom:0;background:url("assets/hero_fuji_ink.jpg") calc(100% - 235px) bottom/auto 118% no-repeat;opacity:.94}
-.hero::after{content:"";position:absolute;left:7%;right:0;bottom:0;height:54px;background:url("assets/brush_divider_editable.svg") left bottom/320px 32px repeat-x;filter:brightness(.15);opacity:.96}
+.hero::before{content:"";position:absolute;left:32%;right:0;top:60px;bottom:0;background:url("hero_fuji_ink.jpg") calc(100% - 235px) bottom/auto 118% no-repeat;opacity:.94}
+.hero::after{content:"";position:absolute;left:7%;right:0;bottom:0;height:54px;background:url("brush_divider_editable.svg") left bottom/320px 32px repeat-x;filter:brightness(.15);opacity:.96}
 .hero .wrap{height:100%}
 .hero-grid{height:100%;display:grid;grid-template-columns:46px 410px 1fr;gap:20px;position:relative}
 .hero-vertical{writing-mode:vertical-rl;text-orientation:mixed;font-family:var(--mincho);font-weight:800;font-size:.85rem;letter-spacing:.2em;height:250px;margin-top:112px;display:flex;align-items:center;gap:8px;z-index:4}
@@ -87,7 +87,7 @@ button{font:inherit}
 .service-thumb img{width:100%;height:100%;object-fit:cover;filter:sepia(.12) saturate(.85) contrast(1.07)}
 .service-card p{font-size:.72rem;line-height:1.72;font-weight:500;max-width:30em}
 .mock-duo{display:flex;align-items:flex-end;height:100%;position:relative;padding:7px 4px 0}
-.mock-window{height:112px;flex:1;background:url("assets/service_webdesign_mockup.jpg") center/cover;border:6px solid #ddd5c6;box-shadow:0 5px 12px rgba(0,0,0,.3)}
+.mock-window{height:112px;flex:1;background:url("service_webdesign_mockup.jpg") center/cover;border:6px solid #ddd5c6;box-shadow:0 5px 12px rgba(0,0,0,.3)}
 .mock-window:first-child{height:137px;z-index:2;transform:rotate(-1deg)}
 .mock-window:last-child{margin-left:-12px;transform:rotate(2deg)}
 .mock-window .bar,.mock-window .body{display:none}
@@ -96,7 +96,7 @@ button{font:inherit}
 .works{height:139px;padding:12px 0 8px}
 .works .wrap{display:grid;grid-template-columns:185px 1fr;gap:18px;height:100%}
 .works-head{display:block;position:relative;padding-top:4px}
-.works-head::before{content:"";position:absolute;left:-35px;top:-18px;width:160px;height:100px;background:url("assets/ink_splatter_01.png") center/contain no-repeat;opacity:.08}
+.works-head::before{content:"";position:absolute;left:-35px;top:-18px;width:160px;height:100px;background:url("ink_splatter_01.png") center/contain no-repeat;opacity:.08}
 .works-head h2{position:relative;font-family:var(--mincho);font-style:italic;font-size:2.55rem;font-weight:800;line-height:1;transform:rotate(-3deg)}
 .works-head .jp{position:relative;display:inline-block;margin:7px 7px 0 3px;font-family:var(--mincho);font-size:.86rem;font-weight:800}
 .works-head .seal{position:relative;width:23px;height:23px;vertical-align:middle}
@@ -116,11 +116,11 @@ button{font:inherit}
 
 /* pricing */
 .pricing{height:202px;margin:0;padding:15px 0 14px;background:#10100e;color:#eee8dc;overflow:hidden}
-.pricing::before{content:"";position:absolute;inset:0;background:url("assets/grain_overlay.svg");opacity:.08}
+.pricing::before{content:"";position:absolute;inset:0;background:url("grain_overlay.svg");opacity:.08}
 .bamboo-deco{position:absolute;left:-10px;bottom:-75px;width:180px;height:230px;opacity:.45}
 .pricing .wrap{display:grid;grid-template-columns:185px 1fr;gap:18px;position:relative;z-index:2;height:100%}
 .pricing-head{position:relative;padding-top:4px}
-.pricing-head::before{content:"";position:absolute;left:-40px;top:-20px;width:180px;height:120px;background:url("assets/ink_splatter_02.png") center/contain no-repeat;filter:invert(1);opacity:.09}
+.pricing-head::before{content:"";position:absolute;left:-40px;top:-20px;width:180px;height:120px;background:url("ink_splatter_02.png") center/contain no-repeat;filter:invert(1);opacity:.09}
 .pricing-head h2{position:relative;font-family:var(--mincho);font-style:italic;font-size:2.2rem;line-height:1;transform:rotate(-3deg)}
 .pricing-head .jp{position:relative;display:inline-block;margin:9px 7px 0 3px;font-family:var(--mincho);font-size:.86rem;font-weight:800}
 .pricing-head .seal{position:relative;width:23px;height:23px;vertical-align:middle}
